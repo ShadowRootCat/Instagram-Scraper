@@ -2,6 +2,12 @@
 
 A Python-based project that leverages Selenium to scrape Instagram followers, fetch profile details, and extract Personally Identifiable Information (PII) from text files. The project is designed to automate Instagram tasks and analyze data for insights. It is built using the Selenium library and includes functionality for saving credentials and restoring sessions via cookies.
 
+# Prerequisites
+
+- Python 3.8 or higher. Install it [here](https://www.python.org/downloads/).
+- Chrome browser and the matching ChromeDriver. Install Chrome [here](https://www.google.com/chrome/) and download ChromeDriver [here](https://sites.google.com/chromium.org/driver/).
+
+
 ---
 
 Features
