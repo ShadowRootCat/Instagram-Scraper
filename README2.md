@@ -32,6 +32,7 @@ def init_browser():
     return webdriver.Chrome(service=Service("chromedriver"), options=options)
 ```
 
+
 2. Target Mobile URLs
 For Instagram, the mobile version is available at https://m.instagram.com. Update all URLs in the script to use the mobile version:
 
@@ -41,6 +42,7 @@ driver.get("https://www.instagram.com/accounts/login/")
 # To:
 driver.get("https://m.instagram.com/accounts/login/")
 ```
+
 
 3. Update Element Selectors
 Mobile websites often use different HTML structures or classes for elements. Use browser developer tools (like Chrome DevTools) to inspect the elements and update the selectors accordingly.
@@ -61,6 +63,7 @@ driver.find_element(By.NAME, "password").send_keys(password)
 driver.find_element(By.NAME, "password").send_keys(Keys.RETURN)
 ```
 
+
 4. Scrolling Adjustments
 For infinite scrolling on mobile, use Keys.END or swipe gestures instead of desktop-style scrolling. For example:
 
@@ -71,6 +74,7 @@ driver.find_element(By.TAG_NAME, "body").send_keys(Keys.END)
 time.sleep(2)  # Allow content to load
 ```
 
+
 Alternatively, use JavaScript to simulate swiping:
 
 ```python
@@ -79,6 +83,7 @@ Alternatively, use JavaScript to simulate swiping:
 driver.execute_script("window.scrollBy(0, 500);")
 time.sleep(2)
 ```
+
 
 5. Simulate Mobile Gestures (Optional)
 To simulate specific mobile interactions, such as tapping or swiping, you can use Selenium's ActionChains:
@@ -90,6 +95,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 element = driver.find_element(By.XPATH, "//button[text()='Next']")
 ActionChains(driver).move_to_element(element).click().perform()
 ```
+
 
 6. Adjust CSS Selectors for Simpler Layouts
 Mobile websites often use smaller or more compact class names. Use browser tools to identify them. For example:
