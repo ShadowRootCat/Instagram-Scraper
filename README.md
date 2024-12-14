@@ -1,2 +1,26 @@
 # Instagram-Scraper
-A Python script that automates the process of logging into Instagram and fetching profile details (name and bio) for a specific username. It is built using the Selenium library and includes functionality for saving credentials and restoring sessions via cookies.
+
+A Python-based project that leverages Selenium to scrape Instagram followers, fetch profile details, and extract Personally Identifiable Information (PII) from text files. The project is designed to automate Instagram tasks and analyze data for insights. It is built using the Selenium library and includes functionality for saving credentials and restoring sessions via cookies.
+
+---
+
+Features
+
+- **Follower Scraping**: Scrape followers of any public profile.
+- **Profile Details Fetching**: Fetch name and bio of Instagram profiles.
+- **PII Extraction**: Extract sensitive information like email addresses, phone numbers, and postal codes from text files.
+
+---
+
+Installation
+
+1. Clone the repository:
+   
+   git clone https://github.com/username/Instagram-Scraper.git
+   cd Instagram-Scraper
+
+2. Install dependencies:
+
+pip install -r requirements.txt
+
+3.Add chromedriver to your system path.
