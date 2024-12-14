@@ -75,7 +75,7 @@ This project is intended for educational and ethical purposes only. Scraping pla
 ---
 
 # Purpose
-The Instagram Scraper project was developed as part of a practical exploration for the Privacy, Compliance, and Human Aspects of Cybersecurity course. The goal was to understand how publicly available data on social media platforms, such as Instagram, can be collected, analyzed, and used in ways that highlight potential privacy concerns while adhering to ethical and legal standards.
+The Instagram Scraper project was developed as part of a practical exploration for the **Privacy, Compliance, and Human Aspects of Cybersecurity** course. The goal was to understand how publicly available data on social media platforms, such as Instagram, can be collected, analyzed, and used in ways that highlight potential privacy concerns while adhering to ethical and legal standards.
 
 This project serves as a hands-on tool for exploring the intersection of technology, privacy, and compliance, particularly in the context of:
 
