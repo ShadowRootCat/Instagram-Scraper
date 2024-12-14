@@ -24,3 +24,32 @@ Installation
 pip install -r requirements.txt
 
 3.Add chromedriver to your system path.
+
+---
+
+Usage
+
+Save Instagram Credentials
+Run the script and save your Instagram credentials:
+
+python scripts/scrape_followers.py
+
+Scrape Followers
+Fetch followers of a public profile:
+
+python scripts/scrape_followers.py
+
+---
+
+Configuration
+
+config.ini: Stores Instagram credentials (username and password).
+
+data_files/: Directory to store text files for PII analysis.
+
+requirements.txt: Contains required Python dependencies.
+
+---
+
+Disclaimer
+This project is intended for educational and ethical purposes only. Scraping platforms like Instagram may violate their terms of service. Use responsibly.
