@@ -15,13 +15,17 @@ Features
 Installation
 
 1. Clone the repository:
-   
-   git clone https://github.com/username/Instagram-Scraper.git
-   cd Instagram-Scraper
+
+'''
+git clone https://github.com/username/Instagram-Scraper.git
+cd Instagram-Scraper
+'''
 
 2. Install dependencies:
 
+'''
 pip install -r requirements.txt
+'''
 
 3.Add chromedriver to your system path.
 
@@ -32,12 +36,16 @@ Usage
 Save Instagram Credentials
 Run the script and save your Instagram credentials:
 
+'''
 python scripts/scrape_followers.py
+'''
 
 Scrape Followers
 Fetch followers of a public profile:
 
+'''
 python scripts/scrape_followers.py
+'''
 
 ---
 
