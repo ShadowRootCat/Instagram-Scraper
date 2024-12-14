@@ -1,5 +1,3 @@
-
-plaintext
 selenium
 configparser
 
