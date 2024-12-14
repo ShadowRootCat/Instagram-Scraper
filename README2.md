@@ -16,8 +16,7 @@ Here are the specific changes to modify the scraper to target mobile versions of
 1. User-Agent Configuration
 Update the Selenium Options to simulate a mobile device by adding a mobile-specific User-Agent string. For example:
 
-python
-Copy code
+```python
 from selenium.webdriver.chrome.options import Options
 
 def init_browser():
@@ -31,15 +30,18 @@ def init_browser():
         "--user-agent=Mozilla/5.0 (Linux; Android 10; SM-G973F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36"
     )  # Android mobile user agent
     return webdriver.Chrome(service=Service("chromedriver"), options=options)
+```
+
 2. Target Mobile URLs
 For Instagram, the mobile version is available at https://m.instagram.com. Update all URLs in the script to use the mobile version:
 
-python
-Copy code
+```python
 # Change:
 driver.get("https://www.instagram.com/accounts/login/")
 # To:
 driver.get("https://m.instagram.com/accounts/login/")
+```
+
 3. Update Element Selectors
 Mobile websites often use different HTML structures or classes for elements. Use browser developer tools (like Chrome DevTools) to inspect the elements and update the selectors accordingly.
 
@@ -47,40 +49,48 @@ For example:
 
 Desktop XPath: //div[@class='some_class']
 Mobile XPath: //div[@class='mobile_specific_class']
+
 Here’s an updated example for Instagram:
 
-python
-Copy code
+```python
+
 # Mobile-specific login elements
 WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.NAME, "username")))
 driver.find_element(By.NAME, "username").send_keys(username)
 driver.find_element(By.NAME, "password").send_keys(password)
 driver.find_element(By.NAME, "password").send_keys(Keys.RETURN)
+```
+
 4. Scrolling Adjustments
 For infinite scrolling on mobile, use Keys.END or swipe gestures instead of desktop-style scrolling. For example:
 
-python
-Copy code
+```python
+
 # Scroll down to load more content
 driver.find_element(By.TAG_NAME, "body").send_keys(Keys.END)
 time.sleep(2)  # Allow content to load
+```
+
 Alternatively, use JavaScript to simulate swiping:
 
-python
-Copy code
+```python
+
 # Scroll using JavaScript
 driver.execute_script("window.scrollBy(0, 500);")
 time.sleep(2)
+```
+
 5. Simulate Mobile Gestures (Optional)
 To simulate specific mobile interactions, such as tapping or swiping, you can use Selenium's ActionChains:
 
-python
-Copy code
+```python
 from selenium.webdriver.common.action_chains import ActionChains
 
 # Example: Simulate a tap
 element = driver.find_element(By.XPATH, "//button[text()='Next']")
 ActionChains(driver).move_to_element(element).click().perform()
+```
+
 6. Adjust CSS Selectors for Simpler Layouts
 Mobile websites often use smaller or more compact class names. Use browser tools to identify them. For example:
 
