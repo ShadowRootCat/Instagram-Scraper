@@ -73,6 +73,61 @@ requirements.txt: Contains required Python dependencies.
 
 To extract Personally Identifiable Information (PII) such as email addresses, phone numbers, and postal codes from text files, you can use Python with regular expressions. Below is an example script with regex patterns to identify these types of PII:
 
+### Summary of Patterns this code will assess:
+
+1. **Email Addresses**:
+   - Matches standard email formats, including subdomains.
+   - **Examples**:  
+     - `user@example.com`  
+     - `name.surname@subdomain.domain.org`  
+
+--
+
+2. **Phone Numbers**:
+   - Supports formats with or without country codes.
+   - Allows separators like spaces, hyphens, or parentheses.
+   - **Examples**:  
+     - `+1 123-456-7890`  
+     - `(123) 456 7890`  
+     - `1234567890`  
+
+--
+
+3. **Addresses**:
+   - Includes numeric street addresses with common suffixes (e.g., Street, Rd, Ave).
+   - Matches multi-part addresses with city, state, and ZIP/postal codes.
+   - **Examples**:  
+     - `123 Main Street, Springfield, IL, 62704`  
+     - `456 Elm Rd, Toronto, ON, M4B 1V7`  
+
+--
+
+4. **Postal Codes**:
+   - Supports country-specific postal code formats for:
+     - **United States**: `12345`, `12345-6789`
+     - **Canada**: `A1A 1A1`
+     - **United Kingdom**: `EC1A 1BB`
+     - **Australia**: `2000`
+     - **India**: `110001`
+     - **Germany** and **France**: `12345`  
+
+--
+
+5. **Dates of Birth**:
+   - Matches various date formats, including:
+     - `DD/MM/YYYY`
+     - `MM-DD-YYYY`
+     - `YYYY/MM/DD`  
+   - **Examples**:  
+     - `12/31/1990`  
+     - `1990-12-31`  
+
+--
+
+6. **Credit Card Numbers**:
+   - Matches 16-digit credit card numbers with or without separators.
+   - `\b\d{4}[ -]?\d{4}[ -]?\d{4}[ -]?\d{4}\b`
+---
 
 # Disclaimer
 This project is intended for educational and ethical purposes only. Scraping platforms like Instagram may violate their terms of service. Use responsibly.
