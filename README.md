@@ -69,6 +69,11 @@ requirements.txt: Contains required Python dependencies.
 
 ---
 
+# Pattern Match
+
+To extract Personally Identifiable Information (PII) such as email addresses, phone numbers, and postal codes from text files, you can use Python with regular expressions. Below is an example script with regex patterns to identify these types of PII:
+
+
 # Disclaimer
 This project is intended for educational and ethical purposes only. Scraping platforms like Instagram may violate their terms of service. Use responsibly.
 
