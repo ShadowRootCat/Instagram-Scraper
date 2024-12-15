@@ -81,7 +81,6 @@ To extract Personally Identifiable Information (PII) such as email addresses, ph
      - `user@example.com`  
      - `name.surname@subdomain.domain.org`  
 
---
 
 2. **Phone Numbers**:
    - Supports formats with or without country codes.
@@ -91,7 +90,6 @@ To extract Personally Identifiable Information (PII) such as email addresses, ph
      - `(123) 456 7890`  
      - `1234567890`  
 
---
 
 3. **Addresses**:
    - Includes numeric street addresses with common suffixes (e.g., Street, Rd, Ave).
@@ -100,7 +98,6 @@ To extract Personally Identifiable Information (PII) such as email addresses, ph
      - `123 Main Street, Springfield, IL, 62704`  
      - `456 Elm Rd, Toronto, ON, M4B 1V7`  
 
---
 
 4. **Postal Codes**:
    - Supports country-specific postal code formats for:
@@ -111,7 +108,6 @@ To extract Personally Identifiable Information (PII) such as email addresses, ph
      - **India**: `110001`
      - **Germany** and **France**: `12345`  
 
---
 
 5. **Dates of Birth**:
    - Matches various date formats, including:
@@ -122,7 +118,6 @@ To extract Personally Identifiable Information (PII) such as email addresses, ph
      - `12/31/1990`  
      - `1990-12-31`  
 
---
 
 6. **Credit Card Numbers**:
    - Matches 16-digit credit card numbers with or without separators.
